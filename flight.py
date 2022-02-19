@@ -16,5 +16,35 @@ class flightObject:
                 'Terminal: ' + self.terminal + '\n' +
                 'Scheduled Time: ' + self.scheduled_time + '\n' +
                 'Updated Time: ' + self.updated_time + '\n' +
-                'Status: '+ self.status + '\n'
+                'Status: ' + self.status + '\n'
                 )
+
+    def string_in_object(self, string):
+        if string in self.flight_company:
+            return True
+        elif string in self.flight:
+            return True
+        elif string in self.landing_from:
+            return True
+        elif string in self.status:
+            return True
+        else:
+            return False
+
+    def search_terminal(self, num):
+        if num in self.terminal:
+            return True
+        else:
+            return False
+
+    def search_updated_time(self, time):
+        if time in self.updated_time:
+            return True
+        else:
+            return False
+
+    def search_scheduled_time(self, time):
+        if time in self.scheduled_time:
+            return True
+        else:
+            return False
